@@ -1,0 +1,30 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background: #020617;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    margin-left: 260px;
+    padding: 3.5rem;
+    overflow-y: auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 60px;
+        padding: 2rem 0.5rem;
+    }
+
+    .nav-brand span,
+    .nav-links span {
+        display: none;
+    }
+
+    .content {
+        margin-left: 60px;
+    }
+}

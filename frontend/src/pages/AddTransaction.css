@@ -1,0 +1,57 @@
+.add-transaction-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Shift UI down */
+    padding: 2rem 2rem 15rem 2rem;
+    /* Substantial bottom padding to allow downward calendar */
+    min-height: calc(100vh - 6rem);
+    position: relative;
+    /* overflow: hidden; Removed to allow calendar visibility */
+}
+
+/* Background decorative element */
+.add-transaction-page::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.05) 100%);
+    filter: blur(80px);
+    border-radius: 50%;
+    top: 10%;
+    right: 15%;
+    z-index: 1;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(24px);
+    padding: 3.5rem;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.form-container h1 {
+    margin-bottom: 0.75rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}

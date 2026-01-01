@@ -1,0 +1,342 @@
+.domains-page h1 {
+    margin-bottom: 0.5rem;
+}
+
+.title-group p {
+    color: #94a3b8;
+    font-size: 1.2rem;
+}
+
+.header-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+.domain-controls {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.main-search {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.65rem 1.25rem;
+    border-radius: 12px;
+    color: #64748b;
+    width: 300px;
+}
+
+.main-search input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.15rem;
+    outline: none;
+    width: 100%;
+}
+
+.add-domain-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-domain-btn:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.domains-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.domain-card-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.domain-card-wrapper.expanded {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.domain-card {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.domain-card:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.domain-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-foreground {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--domain-color);
+    text-transform: uppercase;
+}
+
+.domain-info {
+    flex: 1;
+}
+
+.domain-info h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.stats-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.count-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+}
+
+.total-badge {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--domain-color);
+}
+
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.delete-domain {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.delete-domain:hover {
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.1);
+}
+
+/* Transactions List inside Domain */
+.domain-transactions-list {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid;
+    padding: 1rem;
+}
+
+.mini-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mini-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mini-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px;
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.mini-row:last-child {
+    border-bottom: none;
+}
+
+.mini-row .date {
+    color: #94a3b8;
+}
+
+.mini-row .amt {
+    font-weight: 700;
+    text-align: right;
+}
+
+.mini-row .amt.income {
+    color: #4ade80;
+}
+
+.mini-row .amt.expense {
+    color: #f87171;
+}
+
+.mini-row .mode {
+    color: #cbd5e1;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.inner-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.inner-search input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.85rem;
+    outline: none;
+    width: 100%;
+}
+
+.inner-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 0.5rem 0;
+    font-size: 1.05rem;
+    color: #94a3b8;
+}
+
+.inner-pagination button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.inner-pagination button:disabled {
+    opacity: 0.3;
+}
+
+.empty-domain {
+    text-align: center;
+    padding: 1rem 2rem 2rem 2rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.color-picker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.color-box {
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.color-box.active {
+    border-color: white;
+    transform: scale(1.1);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.page-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #6366f1;
+}
+
+.page-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+}
