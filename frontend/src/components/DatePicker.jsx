@@ -103,7 +103,7 @@ const DatePicker = ({ value, onChange, label }) => {
             {isOpen && (
                 <div className="calendar-popup">
                     <div className="calendar-header">
-                        <button onClick={handlePrevMonth} className="nav-btn"><ChevronLeft size={20} /></button>
+                        <button type="button" onClick={handlePrevMonth} className="nav-btn"><ChevronLeft size={20} /></button>
                         <div className="month-year-select">
                             <span className="current-month-name">{monthNames[viewDate.getMonth()]}</span>
                             <select
@@ -117,7 +117,7 @@ const DatePicker = ({ value, onChange, label }) => {
                                 ))}
                             </select>
                         </div>
-                        <button onClick={handleNextMonth} className="nav-btn"><ChevronRight size={20} /></button>
+                        <button type="button" onClick={handleNextMonth} className="nav-btn"><ChevronRight size={20} /></button>
                     </div>
 
                     <div className="calendar-weekdays">

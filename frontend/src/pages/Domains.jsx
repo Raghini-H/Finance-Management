@@ -98,16 +98,27 @@ function Domains() {
             .catch(() => setTransactions([]))
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        fetch('/api/categories', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(form)
-        }).then(() => {
+
+        try {
+            const res = await fetch('/api/categories', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form)
+            })
+
+            if (!res.ok) {
+                const errorText = await res.text()
+                throw new Error(errorText || 'Unable to create domain')
+            }
+
+            setForm({ name: '', icon: 'Tag', color: '#f87171' })
             setShowAdd(false)
             fetchCategories()
-        })
+        } catch (error) {
+            alert(`Create domain failed: ${error.message}`)
+        }
     }
 
     const handleDelete = (id) => {
